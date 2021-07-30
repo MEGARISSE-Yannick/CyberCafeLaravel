@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Modifier un poste</h2>
+                <h2>Modifier un client</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('postes.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,21 +23,25 @@
         </div>
     @endif
   
-    <form action="{{ route('postes.update',$poste->id) }}" method="POST">
+    <form action="{{ route('users.update',$user->id) }}" method="POST">
         @csrf
         @method('PUT')
    
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Nom:</strong>
-                    <input type="text" name="name" value="{{ $poste->name }}" class="form-control" placeholder="Name">
+                    <strong>Name:</strong>
+                    <input type="text" name="name" value="{{ $user->name }}" class="form-control" placeholder="Name">
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            </div><div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Configuration:</strong>
-                    <textarea class="form-control" style="height:150px" name="config" placeholder="Detail">{{ $poste->config }}</textarea>
+                    <strong>E-Mail:</strong>
+                    <input type="email"  name="email" value="{{ $user->email }}" class="form-control" placeholder="E mail">
+                </div>
+            </div><div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Telephone</strong>
+                    <input type="phone_number" name="phone" value="{{ $user->phone }}" class="form-control" placeholder="NUmero de telephone">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

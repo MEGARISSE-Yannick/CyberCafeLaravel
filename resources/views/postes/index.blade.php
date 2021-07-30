@@ -1,4 +1,4 @@
-@extends('postes.layout')
+@extends('layout.layout')
 @section('content')
 <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -39,7 +39,7 @@
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">-supprimer</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
         </tr>

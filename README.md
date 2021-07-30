@@ -5,10 +5,15 @@ création d'une application pour gerer des postes les assigner a un utilisateur 
 
 ## Tasks
 
-CRUD poste
-CRUD utilisateur
-Connexion ADMIN secure
+# CRUD poste
+# CRUD utilisateur
+# Connexion ADMIN secure
 
+
+
+
+
+## GROS @!#$#@*@$ù%#é%*# DE SOUCIS AVEC DESTROY AUCUN AFFICHAGE POUR USERS 
 
 
 

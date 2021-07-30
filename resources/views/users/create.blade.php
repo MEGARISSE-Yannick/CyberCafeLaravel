@@ -4,10 +4,10 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Ajouter un nouveau poste</h2>
+            <h2>Ajouter un nouveau client</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('postes.index') }}"> <-Back</a>
+            <a class="btn btn-primary" href="{{ route('users.index') }}"> <-Back</a>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
     </div>
 @endif
    
-<form action="{{ route('postes.store') }}" method="POST">
+<form action="{{ route('users.store') }}" method="POST">
     @csrf
   
      <div class="row">
@@ -35,8 +35,13 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Configuration:</strong>
-                <textarea class="form-control" style="height:150px" name="config" placeholder="Configuration du poste"></textarea>
+                <strong>Adresse Email:</strong>
+                <input type="email" name="email" class="form-control" placeholder="Name">
+            </div>
+        </div>      <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Numéro de Telephone:</strong>
+                <input type="phone" name="phone" class="form-control" placeholder="Numero de Telephone">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

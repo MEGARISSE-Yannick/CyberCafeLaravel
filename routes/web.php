@@ -15,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 });
 
 */
+//route pour afficher les utilisateur de la bdd
+use App\Http\Controllers\UserController;
+Route::resource('users',UserController::class);
+
+//route pour afficher les postes de la bdd
 use App\Http\Controllers\PosteController;
 Route::resource('postes',PosteController::class);
