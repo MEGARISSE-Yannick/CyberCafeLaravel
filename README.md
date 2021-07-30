@@ -9,10 +9,7 @@ création d'une application pour gerer des postes les assigner a un utilisateur 
 # CRUD utilisateur
 # Connexion ADMIN secure
 
-
-
-
-## git ne fonctionne pas avec moi
+# git ne fonctionne pas avec moi si un peut mais un petit peut!
 ## GROS @!#$#@*@$ù%#é%*# DE SOUCIS AVEC DESTROY AUCUN AFFICHAGE POUR USERS 
 
 
