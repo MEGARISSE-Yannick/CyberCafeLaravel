@@ -12,7 +12,7 @@ création d'une application pour gerer des postes les assigner a un utilisateur 
 
 
 
-
+## git ne fonctionne pas avec moi
 ## GROS @!#$#@*@$ù%#é%*# DE SOUCIS AVEC DESTROY AUCUN AFFICHAGE POUR USERS 
 
 
