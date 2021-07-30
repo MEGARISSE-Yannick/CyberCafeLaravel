@@ -41,7 +41,7 @@
             </div><div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Telephone</strong>
-                    <input type="phone_number" name="phone" value="{{ $user->phone }}" class="form-control" placeholder="NUmero de telephone">
+                    <input type="phone_number" name="phone" value="{{ $user->phone }}" class="form-control" placeholder="Numero de telephone">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

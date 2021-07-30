@@ -32,13 +32,14 @@
     <td>{{ $user->email }}</td>
     <td>{{ $user->phone }}</td>
     <td>
-        <form action="{{ route('user.destroy',$user->id) }}" method="POST">
+        <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+        
+            <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">voir</a>
 
-            <a class="btn btn-info" href="{{ route('user.show',$user->id) }}">voir</a>
-
-            <a class="btn btn-primary" href="{{ route('user.edit',$user->id) }}">modif</a>
+            <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">modif</a>
 
             @csrf
+            @method('DELETE')
 
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
@@ -46,6 +47,5 @@
 </tr>
 @endforeach
 </table>
-    {!! $postes->links() !!}
-      
+{!! $users->links() !!}
 @endsection

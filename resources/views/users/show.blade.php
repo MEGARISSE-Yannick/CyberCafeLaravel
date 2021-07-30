@@ -7,7 +7,7 @@
                 <h2> Afficher client</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('user.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -21,9 +21,15 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Configuration:</strong>
-                {{ $user->config }}
+                <strong>Email:</strong>
+                {{ $user->email }}
+            </div>
+        </div>  <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Téléphone:</strong>
+                {{ $user->phone }}
             </div>
         </div>
+       
     </div>
 @endsection
