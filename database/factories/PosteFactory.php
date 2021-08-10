@@ -24,8 +24,13 @@ class PosteFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'config' => Str::random(50)
-        ];
+            'carte_graphique' =>$this->faker->name(),
+            'processeur' =>$this->faker->name(),
+            'carte_mere' =>$this->faker->name(),
+            'ram' =>$this->faker->name(),
+            'memoire' =>$this->faker->name(),
+            'type' => true
+               ];
     }
 }
 

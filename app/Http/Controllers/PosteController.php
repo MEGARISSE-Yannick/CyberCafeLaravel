@@ -41,7 +41,13 @@ class PosteController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'config' => 'required',
+            'carte_graphique' => 'required',
+            'processeur' => 'required',
+            'carte_mere' => 'required',
+            'ram' => 'required',
+            'memoire' => 'required',
+            'type' => 'required',
+            
         ]);
         Poste::create($request->all());
         return redirect()->route('postes.index')
@@ -84,7 +90,12 @@ class PosteController extends Controller
     {
         $request->validate([
             'name' =>'required',
-            'config' =>'required',
+            'carte_graphique' => 'required',
+            'processeur' => 'required',
+            'carte_mere' => 'required',
+            'ram' => 'required',
+            'memoire' => 'required',
+            'type' => 'required',
         ]);
         $poste->update($request->all());
         return redirect()->route('postes.index')
@@ -103,4 +114,5 @@ class PosteController extends Controller
         return redirect()->route('postes.index')
         ->with('success','Le poste a été supprimer de la base');
     }
+    
 }

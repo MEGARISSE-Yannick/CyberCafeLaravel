@@ -16,7 +16,7 @@
         <!-- tous les utilisateur de la bdd + crud + nouveau utilisateur  -->
       <a class="nav-item nav-link" href="{{ route('users.index') }}">Utilisateurs</a>
         <!-- toutes les reservations en cours ou a venir -->
-      <a class="nav-item nav-link" href="#">Reservations</a>
+      <a class="nav-item nav-link" href="{{ route('reservations.index') }}">Reservations</a>
   </div>
 </nav>
 <div class="container">

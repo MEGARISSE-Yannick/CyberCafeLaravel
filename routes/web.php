@@ -22,3 +22,8 @@ Route::resource('users',UserController::class);
 //route pour afficher les postes de la bdd
 use App\Http\Controllers\PosteController;
 Route::resource('postes',PosteController::class);
+
+//route pour afficher les reservations de la bdd
+use App\Http\Controllers\ReservationController;
+Route::resource('reservations',ReservationController::class);
+

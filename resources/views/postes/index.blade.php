@@ -18,8 +18,9 @@
     @endif
    
     <table class="table table-bordered">
+        <!-- tableau affichage de tous les postes de la bdd / affichage du type de poste  -->
         <tr>
-            <th>No</th>
+            <th>🦋</th>
             <th>Nom</th>
             <th>Configuration</th>
             <th width="280px">Action</th>
@@ -28,12 +29,35 @@
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $poste->name }}</td>
-            <td>{{ $poste->config }}</td>
+            <td>
+            1️⃣             {{ $poste->carte_graphique }}
+            <br>
+
+            2️⃣                {{ $poste->processeur }}
+            <br>
+
+            3️⃣                {{ $poste->carte_mere }}
+            <br>
+
+            4️⃣                {{ $poste->ram }}
+            <br>
+
+            5️⃣                {{ $poste->memoire }}
+            <br>
+
+            6️⃣                   
+
+                                @if ($poste -> type == 1)
+                                    Gaming
+                                    @else 
+                                    Bureau
+                                @endif
+                                    
+                                </td>
+
             <td>
                 <form action="{{ route('postes.destroy',$poste->id) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('postes.show',$poste->id) }}">voir</a>
-    
+       
                     <a class="btn btn-primary" href="{{ route('postes.edit',$poste->id) }}">modif</a>
    
                     @csrf

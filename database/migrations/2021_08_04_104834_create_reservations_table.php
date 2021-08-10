@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePosteTable extends Migration
+class CreateReservationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreatePosteTable extends Migration
      */
     public function up()
     {
-        Schema::create('postes', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
+            
             $table->id();
-            $table->string('name');
-            $table->text('config');
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('poste_id')->constrained()->cascadeOnDelete();
+            $table->Time('debut');
+            $table->Time('fin');
+            $table->date('jour');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreatePosteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('postes');
+        Schema::dropIfExists('reservations');
     }
 }
